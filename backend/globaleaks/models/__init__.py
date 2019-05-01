@@ -390,7 +390,7 @@ class _Context(Model):
 
     tid = Column(Integer, default=1, nullable=False)
 
-    show_steps_navigation_interface = Column(Boolean, default=True, nullable=False)
+    show_steps_navigation_interface = Column(Boolean, default=False, nullable=False)
     show_small_receiver_cards = Column(Boolean, default=False, nullable=False)
     show_recipients_details = Column(Boolean, default=False, nullable=False)
     allow_recipients_selection = Column(Boolean, default=False, nullable=False)
@@ -398,7 +398,7 @@ class _Context(Model):
     select_all_receivers = Column(Boolean, default=True, nullable=False)
     enable_comments = Column(Boolean, default=True, nullable=False)
     enable_messages = Column(Boolean, default=False, nullable=False)
-    enable_two_way_comments = Column(Boolean, default=True, nullable=False)
+    enable_two_way_comments = Column(Boolean, default=False, nullable=False)
     enable_two_way_messages = Column(Boolean, default=True, nullable=False)
     enable_attachments = Column(Boolean, default=True, nullable=False)
     enable_rc_to_wb_files = Column(Boolean, default=False, nullable=False)

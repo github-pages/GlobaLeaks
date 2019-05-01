@@ -1,4 +1,4 @@
-<div id="HomePageBox" data-ng-controller="HomeCtrl" data-ng-if="GLTranslate.indirect.appLanguage == 'fr'">
+<div id="HomePageBox" data-ng-controller="HomeCtrl" data-ng-if="GLTranslate.state.language == 'fr'">
   <div id="section0">
     <p>Le Bureau du Procureur (Le Bureau) m&egrave;ne des enqu&ecirc;tes portant sur des <a onclick="go_to(3)">crimes contre l'humanit&eacute; et des crimes de guerre</a> commis en R&eacute;publique centrafricaine depuis le 1er ao&ucirc;t 2012. Cette plateforme est con&ccedil;ue pour aider le Bureau du Procureur &agrave; identifier les personnes susceptibles de d&eacute;tenir des informations pertinentes pour son enqu&ecirc;te. Cette plateforme n'est pas con&ccedil;ue pour pr&eacute;senter une demande de participation en tant que victime ou toute autre demande. Les renseignements <a onclick="go_to(4)">anonymes</a> que vous nous transmettez seront examin&eacute;s et exploit&eacute;s par les &eacute;quipes d'enqu&ecirc;teurs.</p>
     <p>Nous vous enverrons un message via la plate-forme, si nous souhaitons nous entretenir avec vous ou vous poser d'autres questions. Nous examinerons tous les renseignements communiqu&eacute;s, mais nous ne serons pas en mesure de recontacter tout le monde. Si vous d&eacute;cidez de quitter la plateforme sans avoir cliqu&eacute; sur "envoyer" &agrave; la fin du questionnaire, aucune information ne sera enregistr&eacute;e.</p><br />
@@ -12,6 +12,12 @@
     <br />
     <div style="width:100%; text-align:right">
       <button id="button-right" class="btn btn-primary" data-ng-disabled="!understand0" onclick="next()">Suivant</button>
+    </div>
+
+    </br></br></br>
+
+    <div class="center-block" style="text-align: center">
+      <span data-ng-include="'views/partials/wb_login_box.html'"></span>
     </div>
   </div>
 
@@ -55,25 +61,17 @@
       </label>
     </div>
 
-    </br>
+    <br />
 
     <div id="WhistleblowerBox">
       <div id="WhistleblowerSubmitBox">
         <div id="WhistleblowerSubmitBoxButton">
-          <button data-ng-disabled="!understand2" data-ng-click="Utils.go('/submission')" class="btn btn-primary">
+          <button data-ng-disabled="!understand2" data-ng-click="evaluateAnonimityModalOpening() || Utils.go('/submission')" class="btn btn-primary">
             <span>{{::node.whistleblowing_button}}</span>
           </button>
         </div>
       </div>
-
-      <br /><br />
-
-      <div class="center-block">
-        <span data-ng-include="'views/partials/wb_login_box.html'"></span>
-      </div>
     </div>
-
-    <br />
 
     <div><button id="button-right" class="btn btn-primary" onclick="previous()">Pr&eacute;c&eacute;dant</button></div>
   </div>
@@ -96,9 +94,9 @@
     <div><button id="button-right" class="btn btn-primary" onclick="go_to(1)">Pr&eacute;c&eacute;dant</button></div>
   </div>
 </div>
-<div id="HomePageBox" data-ng-controller="HomeCtrl" data-ng-if="GLTranslate.indirect.appLanguage == 'en'">
+<div id="HomePageBox" data-ng-controller="HomeCtrl" data-ng-if="GLTranslate.state.language == 'en'">
   <div id="section0">
-    <p>The Office of the Prosecutor (OTP) is investigating <a onclick="go_to(3)">crimes against humanity and war crimes</a> committed in Central African Republic since August 1, 2012. This platform is designed to help the OTP identify persons who may have information relevant to its investigation. It is not designed for the registration of victims or any other purpose. The <a onclick="go_to(4)">anonymous</a> information you share will be reviewed and may be used in the investigation.</p>
+    <p>The Office of the Prosecutor (OTP) is investigating <a onclick="go_to(3)">crimes against humanity and war crimes</a> committed in Libya since February 15, 2011. This platform is designed to help the OTP identify persons who may have information relevant to its investigation. It is not designed for the registration of victims or any other purpose. The <a onclick="go_to(4)">anonymous</a> information you share will be reviewed and may be used in the investigation.</p>
     <p>We will send you a return message via the platform if we want to talk to you or if we have more questions. We will review every submission, but cannot re-contact everyone. If you choose to exit the platform without pressing the "Submit" button, no information will be recorded.</p><br />
 
     <div class="form-group">
@@ -107,9 +105,17 @@
         <span>I confirm that, if I complete my submission, I consent to being re-contacted via the platform by the OTP.</span>
       </label>
     </div>
+
     <br />
+
     <div style="width:100%; text-align:right">
       <button id="button-right" class="btn btn-primary" data-ng-disabled="!understand0" onclick="next()">Next</button>
+    </div>
+
+    </br></br></br>
+
+    <div class="center-block" style="text-align: center">
+      <span data-ng-include="'views/partials/wb_login_box.html'"></span>
     </div>
   </div>
 
@@ -153,7 +159,7 @@
       </label>
     </div>
 
-    </br>
+    <br />
 
     <div id="WhistleblowerBox">
       <div id="WhistleblowerSubmitBox">
@@ -162,12 +168,6 @@
             <span>{{::node.whistleblowing_button}}</span>
           </button>
         </div>
-      </div>
-
-      <br /><br />
-
-      <div class="center-block">
-        <span data-ng-include="'views/partials/wb_login_box.html'"></span>
       </div>
     </div>
 
