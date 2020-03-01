@@ -19,7 +19,6 @@ exports.config = {
   sauceKey: process.env.SAUCE_ACCESS_KEY,
   sauceBuild: process.env.TRAVIS_BUILD_NUMBER,
   capabilities: browser_capabilities,
-  rootElement: "html",
 
   params: {
     "testFileDownload": false,
