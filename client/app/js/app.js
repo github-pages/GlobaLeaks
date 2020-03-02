@@ -910,5 +910,5 @@ angular.element(document).ready(function() {
   //}
 
   document.body.setAttribute('ng-app', 'GLClient');
-  angular.bootstrap(document, ['GLClient']);
+  angular.bootstrap(document.html, ['GLClient']);
 });
