@@ -903,3 +903,12 @@ var GLClient = angular.module("GLClient", [
       fromError: StackTrace.fromError
     });
 });
+
+angular.element(document).ready(function() {
+  //if (location.search.indexOf("test=protractor") > -1) {
+  window.name = 'NG_DEFER_BOOTSTRAP!' + window.name;
+  //}
+
+  document.body.setAttribute('ng-app', 'GLClient');
+  angular.bootstrap(document, ['GLClient']);
+});
